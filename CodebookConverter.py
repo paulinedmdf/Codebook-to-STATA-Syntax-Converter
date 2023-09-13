@@ -2,7 +2,6 @@
 # Please see README.md file prior to running
 # Author: Fernando Rodriguez
 
-
 # list files in a directory using :os.path.join
 import os
 
@@ -11,8 +10,7 @@ import csv
 
 
 # file directory
-data_dir = "/Users/fernanr1/Google Drive/Python Workspace/Codebook Converter - 11-15-17/"
-
+data_dir = "/Users/pauli/OneDrive - Johns Hopkins/Center for Communications Programs/Codebook-to-STATA-Syntax-Converter-master" 
 
 # file name
 csv_file = os.path.join(data_dir, "codebook_file.csv")
@@ -23,17 +21,17 @@ type(csv_file)
 with open(csv_file, 'r') as f:
     reader = csv.reader(f, delimiter = ',') # saving contents to variable 'reader'
     for line in reader:
-        print line[0] # reading the first column
+        print (line[0]) # reading the first colum 
 
 
 
 # Getting a list of all of the response options
 with open(csv_file, 'r') as f:
     reader = csv.reader(f, delimiter = ',')
-    header = reader.next()
+    header = next(reader)
     for line in reader:
         responseopt = line[2]
-        print responseopt
+        print (responseopt)
 
 # Getting a list of unique response options
 # These will be the values for the key:value pairs
@@ -41,51 +39,53 @@ responses = []
 
 with open(csv_file, 'r') as f:
     reader = csv.reader(f, delimiter = ',')
-    header = reader.next()
+    header = next(reader)
     for line in reader:
         if line[2] not in responses:
             responses.append(line[2])
-
-print responses
+            
+print (responses)
 
 
 # Generating 100 labelids which will serve as the keys for the key:value pair# Genera
 labelid = []
 labelnum = 1
 for x in range(1, 101):
-    res = ("labelname" + `labelnum`)
     labelnum += 1
+    res = ("labelname" + str(labelnum))
     labelid.append(res)
 print(labelid[:10])
 
 
 # Creating label dictionary by combining the label id (key) and responses (values)
 labeldict = dict(zip(labelid, responses))
-print labeldict
+print (labeldict)
 
 
 
 # 1) Defining the response options
-print "*** DEFINING LABELS FOR EACH UNIQUE RESPONSE OPTIONS ***"
-print ""
+print ("DEFINING LABELS FOR EACH UNIQUE RESPONSE OPTION")
+print ("")
 for x in labeldict:
-    print "label define", x, str(labeldict[x])
-    print ""
-print ""
-print ""
+    print ("label define", x, str(labeldict[x]))
+    print ("")
+print ("")
+print ("")
 
 
 # 2) Lableing the variables
-print "*** DATA LABELING ***"
-print ""
+print ("*** DATA LABELING AND TABULATION***")
+print ("")
 with open(csv_file, 'r') as f:
     reader = csv.reader(f, delimiter = ',')
-    header = reader.next()
+    header = next(reader)
     for line in reader:
         labels = str(line[0])+"label" # making a label name for STATA
-        print "*", line[0], "data label"
-        print "label variable", line[0], '"%s"' % line[1]
+        print ("*", line[0], "data label")
+        print ("label variable", line[0], '"%s"' % line[1])
         for keylist, valuelist in labeldict.items():
-            if valuelist == str(line[2]):
-                print "label values", keylist
-        print""
+            if valuelist == str(line[2]) and str(line[2]) != "None":
+                print ("label values", str(line[0]), keylist)
+        if str(line[2]) != "None": print ("asdoc tab",line[0],", append")
+        if str(line[2]) == "None": print ("asdoc summarize",line[0],", append")
+        print("")

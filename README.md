@@ -39,52 +39,52 @@ label define labelname6 "None"
 
 *** DATA LABELING AND TABULATION***
 
-* coursetype data label
+** coursetype data label
 label variable coursetype "Course type"
 label values coursetype labelname2
 asdoc tab coursetype , append
 
-* pre_status data label
+** pre_status data label
 label variable pre_status "Pre-survey participation status"
 label values pre_status labelname3
 asdoc tab pre_status , append
 
-* post_status data label
+** post_status data label
 label variable post_status "Post-survey participation status"
 label values post_status labelname3
 asdoc tab post_status , append
 
-* pre_ma3 data label
+** pre_ma3 data label
 label variable pre_ma3 "I like class work best when it really makes me think"
 label values pre_ma3 labelname4
 asdoc tab pre_ma3 , append
 
-* pre_pav6 data label
+** pre_pav6 data label
 label variable pre_pav6 "One reason I would not participate in class is to avoid looking stupid"
 label values pre_pav6 labelname4
 asdoc tab pre_pav6 , append
 
-* pre_ma5 data label
+** pre_ma5 data label
 label variable pre_ma5 "An important reason I do my class work is because I enjoy it"
 label values pre_ma5 labelname4
 asdoc tab pre_ma5 , append
 
-* pre_int data label
+** pre_int data label
 label variable pre_int "Are you an international student?"
 label values pre_int labelname5
 asdoc tab pre_int , append
 
-* pre_eng data label
+** pre_eng data label
 label variable pre_eng "Is English your native language"
 label values pre_eng labelname5
 asdoc tab pre_eng , append
 
-* score data label
+** score data label
 label variable score "How would you score this class on a scale of 1 to 10?"
 label values score labelname6
 asdoc tab score , append
 
-* age data label
+** age data label
 label variable age "What is your age?"
 label values age labelname6
 asdoc tab age , append

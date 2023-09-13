@@ -19,13 +19,23 @@ Notice that all you need are three pieces of information:
 
 Use the <b>CodebookConverter.py</b> to run the converter. Details about the structure of the code can be found in the <b>CodebookConverter.ipynb</b> notebook.
 
-After running the program, you will get two get the following Stata Syntax:<br>
-Syntax that defines the labels for each unique response option.<br>
-Syntax that labels each labels each variable.<br>
+After running the program, you will get the following Stata Syntax:<br>
+Syntax that defines the labels for each unique response option, numbering them by their unique instance.<br>
+Syntax that labels each variable.<br>
 <br>
 <br>
 
-*** DEFINING LABELS FOR EACH UNIQUE RESPONSE OPTIONS ***
+***DEFINING LABELS FOR EACH UNIQUE RESPONSE OPTION***
+
+label define labelname2 1 "Online" 0 "Face-to-face"
+
+label define labelname3 1 "Participated" 0 "Did not participate"
+
+label define labelname4 1 "Not at all true" 2 "Not true" 3 "Somewhat true" 4 "True" 5 "Very true"
+
+label define labelname5 1 "Yes"  0 "No"
+
+label define labelname6 "None"
 
 *** DATA LABELING AND TABULATION***
 

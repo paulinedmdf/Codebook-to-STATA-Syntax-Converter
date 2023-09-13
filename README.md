@@ -27,52 +27,60 @@ Syntax that labels each labels each variable.<br>
 
 *** DEFINING LABELS FOR EACH UNIQUE RESPONSE OPTIONS ***
 
-label define labelname4 1 "Yes"  0 "No"
+*** DATA LABELING AND TABULATION***
 
-label define labelname3 1 "Not at all true" 2 "Not true" 3 "Somewhat true" 4 "True" 5 "Very true"
+* coursetype data label
+label variable coursetype "Course type"
+label values coursetype labelname2
+asdoc tab coursetype , append
 
-label define labelname2 1 "Participated" 0 "Did not participate"
+* pre_status data label
+label variable pre_status "Pre-survey participation status"
+label values pre_status labelname3
+asdoc tab pre_status , append
 
-label define labelname1 1 "Online" 0 "Face-to-face"
-<br><br><br>
+* post_status data label
+label variable post_status "Post-survey participation status"
+label values post_status labelname3
+asdoc tab post_status , append
 
-*** DATA LABELING ***
+* pre_ma3 data label
+label variable pre_ma3 "I like class work best when it really makes me think"
+label values pre_ma3 labelname4
+asdoc tab pre_ma3 , append
 
-* coursetype data label<br>
-label variable coursetype "Course type"<br>
-label values labelname1<br>
+* pre_pav6 data label
+label variable pre_pav6 "One reason I would not participate in class is to avoid looking stupid"
+label values pre_pav6 labelname4
+asdoc tab pre_pav6 , append
 
-* pre_status data label<br>
-label variable pre_status "Pre-survey participation status"<br>
-label values labelname2<br>
+* pre_ma5 data label
+label variable pre_ma5 "An important reason I do my class work is because I enjoy it"
+label values pre_ma5 labelname4
+asdoc tab pre_ma5 , append
 
-* post_status data label<br>
-label variable post_status "Post-survey participation status"<br>
-label values labelname2<br>
+* pre_int data label
+label variable pre_int "Are you an international student?"
+label values pre_int labelname5
+asdoc tab pre_int , append
 
-* pre_ma3 data label<br>
-label variable pre_ma3 "I like class work best when it really makes me think"<br>
-label values labelname3<br>
+* pre_eng data label
+label variable pre_eng "Is English your native language"
+label values pre_eng labelname5
+asdoc tab pre_eng , append
 
-* pre_pav6 data label<br>
-label variable pre_pav6 "One reason I would not participate in class is to avoid looking stupid"<br>
-label values labelname3<br>
+* score data label
+label variable score "How would you score this class on a scale of 1 to 10?"
+label values score labelname6
+asdoc tab score , append
 
-* pre_ma5 data label<br>
-label variable pre_ma5 "An important reason I do my class work is because I enjoy it"<br>
-label values labelname3<br>
-
-* pre_int data label<br>
-label variable pre_int "Are you an international student?"<br>
-label values labelname4<br>
-
-* pre_eng data label<br>
-label variable pre_eng "Is English your native language"<br>
-label values labelname4<br>
-<br><br><br><br>
+* age data label
+label variable age "What is your age?"
+label values age labelname6
+asdoc tab age , append
 
 ## Author
 
 **Fernando Rodriguez** https://github.com/FernandoUCI
-
+**Updated by Paulina Del Mundo Del Fierro
 

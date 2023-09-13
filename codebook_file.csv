@@ -7,3 +7,5 @@ pre_pav6,One reason I would not participate in class is to avoid looking stupid,
 pre_ma5,An important reason I do my class work is because I enjoy it,"1 ""Not at all true"" 2 ""Not true"" 3 ""Somewhat true"" 4 ""True"" 5 ""Very true"""
 pre_int,Are you an international student?,"1 ""Yes""  0 ""No"""
 pre_eng,Is English your native language,"1 ""Yes""  0 ""No"""
+score,How would you score this class on a scale of 1 to 10?,"""None"""
+age,What is your age?,"""None"""

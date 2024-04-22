@@ -20,7 +20,7 @@ Notice that all you need are three pieces of information:
 Use the <b>CodebookConverter.py</b> to run the converter. Details about the structure of the code can be found in the <b>CodebookConverter.ipynb</b> notebook.
 
 After running the program, you will get the following Stata Syntax:<br>
-Syntax that defines the labels for each unique response option, numbering them by their unique instance.<br>
+Syntax that defines the labels for each unique response option, numbering them by their unique instance. <br>
 Syntax that labels each variable.<br>
 <br>
 <br>
@@ -42,52 +42,52 @@ label define labelname6 "None"
 ** coursetype data label
 label variable coursetype "Course type"
 label values coursetype labelname2
-asdoc tab coursetype , append
+tab coursetype
 
 ** pre_status data label
 label variable pre_status "Pre-survey participation status"
 label values pre_status labelname3
-asdoc tab pre_status , append
+tab pre_status
 
 ** post_status data label
 label variable post_status "Post-survey participation status"
 label values post_status labelname3
-asdoc tab post_status , append
+tab post_status
 
 ** pre_ma3 data label
 label variable pre_ma3 "I like class work best when it really makes me think"
 label values pre_ma3 labelname4
-asdoc tab pre_ma3 , append
+tab pre_ma3
 
 ** pre_pav6 data label
 label variable pre_pav6 "One reason I would not participate in class is to avoid looking stupid"
 label values pre_pav6 labelname4
-asdoc tab pre_pav6 , append
+tab pre_pav6
 
 ** pre_ma5 data label
 label variable pre_ma5 "An important reason I do my class work is because I enjoy it"
 label values pre_ma5 labelname4
-asdoc tab pre_ma5 , append
+tab pre_ma5
 
 ** pre_int data label
 label variable pre_int "Are you an international student?"
 label values pre_int labelname5
-asdoc tab pre_int , append
+tab pre_int
 
 ** pre_eng data label
 label variable pre_eng "Is English your native language"
 label values pre_eng labelname5
-asdoc tab pre_eng , append
+tab pre_eng
 
 ** score data label
 label variable score "How would you score this class on a scale of 1 to 10?"
 label values score labelname6
-asdoc tab score , append
+tab score
 
 ** age data label
 label variable age "What is your age?"
 label values age labelname6
-asdoc tab age , append
+tab age
 
 ## Author
 

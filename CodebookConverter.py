@@ -10,7 +10,7 @@ import csv
 
 
 # file directory
-data_dir = "/Users/pauli/OneDrive - Johns Hopkins/Center for Communications Programs/Codebook-to-STATA-Syntax-Converter-master" 
+data_dir = "/Your-Directory-Here/Codebook-to-STATA-Syntax-Converter-master" 
 
 # file name
 csv_file = os.path.join(data_dir, "codebook_file.csv")
@@ -86,6 +86,6 @@ with open(csv_file, 'r') as f:
         for keylist, valuelist in labeldict.items():
             if valuelist == str(line[2]) and str(line[2]) != "None":
                 print ("label values", str(line[0]), keylist)
-        if str(line[2]) != "None": print ("asdoc tab",line[0],", append")
-        if str(line[2]) == "None": print ("asdoc summarize",line[0],", append")
+        if str(line[2]) != "None": print ("tab",line[0])
+        if str(line[2]) == "None": print ("summarize",line[0])
         print("")
